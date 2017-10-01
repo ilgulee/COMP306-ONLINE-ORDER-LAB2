@@ -7,6 +7,8 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using System.ComponentModel.DataAnnotations;
+
 namespace COMP306_ONLINE_ORDER_LAB2.Models
 {
     using System;
@@ -21,11 +23,17 @@ namespace COMP306_ONLINE_ORDER_LAB2.Models
         }
     
         public int CustomerId { get; set; }
+        [Required]
         public string FirstName { get; set; }
+        [Required]
         public string LastName { get; set; }
+        [Required]
         public string Phone { get; set; }
+        [Required]
         public string Address { get; set; }
+        [Required]
         public string DistrictName { get; set; }
+        [Required]
         public string PostalCode { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
