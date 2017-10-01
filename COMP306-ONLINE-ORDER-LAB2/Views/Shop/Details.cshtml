@@ -47,9 +47,17 @@
 
         <dd>
             <p class="pull-right label label-primary"> $@Html.DisplayFor(model => model.Price)</p>
-</dd>
+        </dd>
     </dl>
 </div>
+@using (Html.BeginForm("AddToCart", "ShoppingCart"))
+{
+    <div class="pull-right">
+        @Html.HiddenFor(x=>x.ProductId)
+        @Html.Hidden("returnUrl",Request.Url.PathAndQuery)
+        <input type="submit" class="btn btn-success" value="Add to cart" />
+    </div>
+}
 <p>
     @*@Html.ActionLink("Edit", "Edit", new { id = Model.ProductId }) |*@
     @Html.ActionLink("Back to List", "Index")
