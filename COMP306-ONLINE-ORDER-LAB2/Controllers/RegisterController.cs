@@ -31,10 +31,10 @@ namespace COMP306_ONLINE_ORDER_LAB2.Controllers
                 db.Customers.Add(customer);
                 db.SaveChanges();
                 return RedirectToAction("Index", "Home");
-            }else
-            {
-                return RedirectToAction("Index", "Register");
             }
+            
+                return RedirectToAction("Index", "Register");
+            
             
         }
     }

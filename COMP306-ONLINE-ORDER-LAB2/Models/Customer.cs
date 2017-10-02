@@ -23,9 +23,9 @@ namespace COMP306_ONLINE_ORDER_LAB2.Models
         }
     
         public int CustomerId { get; set; }
-        [Required]
+        [Required(ErrorMessage="Please provide UserName",AllowEmptyStrings =false)]
         public string FirstName { get; set; }
-        [Required]
+        [Required(ErrorMessage = "Please provide UserName", AllowEmptyStrings = false)]
         public string LastName { get; set; }
         [Required]
         public string Phone { get; set; }
@@ -35,7 +35,8 @@ namespace COMP306_ONLINE_ORDER_LAB2.Models
         public string DistrictName { get; set; }
         [Required]
         public string PostalCode { get; set; }
-    
+
+        public string LoginErrorMessage { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Orders { get; set; }
     }
